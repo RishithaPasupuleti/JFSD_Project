@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar .title {
+            font-size: 1.5em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .image-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .image-list img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        .image-list button {
+            margin-left: 10px;
+            background-color: #dc3545;
+        }
+
+        .image-list button:hover {
+            background-color: #b52a37;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Admin Panel</div>
+        <div>
+            <button onclick="window.location.href='home.html';">Go to Home</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Manage Homepage Images</h1>
+
+        <form id="uploadForm">
+            <label for="imageUpload">Add New Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button type="button" onclick="addImage()">Upload</button>
+        </form>
+
+        <ul class="image-list" id="imageList">
+            <!-- Dynamic list of images will appear here -->
+        </ul>
+    </div>
+
+    <script>
+        const imageList = document.getElementById('imageList');
+
+        // Function to add a new image
+        function addImage() {
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const newImage = {
+                        id: Date.now(), // Unique ID for image
+                        src: event.target.result
+                    };
+
+                    // Add image to the list
+                    renderImage(newImage);
+                };
+                reader.readAsDataURL(file);
+
+                fileInput.value = ''; // Clear the file input
+            } else {
+                alert('Please select an image to upload.');
+            }
+        }
+
+        // Function to render an image item
+        function renderImage(image) {
+            const li = document.createElement('li');
+            li.dataset.id = image.id;
+            li.innerHTML = `
+                <img src="${image.src}" alt="Image">
+                <div>
+                    <button onclick="deleteImage(${image.id})">Delete</button>
+                </div>
+            `;
+            imageList.appendChild(li);
+        }
+
+        // Function to delete an image
+        function deleteImage(imageId) {
+            const imageItem = document.querySelector(`li[data-id='${imageId}']`);
+            if (imageItem) {
+                imageList.removeChild(imageItem);
+            }
+        }
+
+        // Example: Load existing images (optional)
+        const existingImages = [];
+        existingImages.forEach(renderImage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handicrafts Store</title>
+    <style>
+        /* General reset for height and margin */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Added default font for consistency */
+        }
+
+        /* Body background styling */
+        body {
+            background-image: url('../images/image-1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #4F4039; /* Updated text color */
+        }
+
+        /* Container styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 10px auto; /* Center content horizontally */
+            max-width: 1200px; /* Restrict container width for better appearance */
+            border-radius: 8px; /* Rounded edges for the container */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            color: #FDEA79; /* Title color */
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        
+       
+         /* Logout button styling */
+        .logout-btn {
+            position: absolute; /* Positioning the button */
+            top: 20px;
+            right: 20px; /* Align it to the top-right corner */
+            padding: 10px 20px;
+            background-color: #ABA355; /* Button color */
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none; /* Remove underline */
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+          .logout-btn:hover {
+            background-color: #FDEA79; /* Hover effect */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+        
+
+        /* Product grid container */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+            gap: 20px; /* Increased gap for better spacing */
+            padding: 20px;
+            margin-top: 20px; /* Add space between sections */
+        }
+
+        /* Styling for product items */
+        .product-item {
+            text-align: center;
+            padding: 10px; /* Add spacing within each item */
+            background-color: rgba(255, 255, 255, 0.9); /* Subtle background for each item */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for individual items */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+            max-width: 100%; /* Make sure the item takes full width */
+        }
+
+        .product-item:hover {
+            transform: scale(1.02); /* Slight lift effect on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+
+        /* Styling for product images */
+        .product-item img {
+            width: 100%; /* Ensure the image takes up 100% of the container width */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #ABA355; /* Light border with new color */
+            border-radius: 8px; /* Rounded corners */
+            transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+            object-fit: cover; /* Ensure image fully fits in its container without distortion */
+            height: 200px; /* Fixed height for images */
+        }
+
+        .product-item img:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        /* Styling for product links */
+        .product-item a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #ABA355; /* Updated link color */
+            font-weight: bold;
+            font-size: 14px; /* Reduced font size */
+            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Smooth color and shadow changes */
+        }
+
+        .product-item a:hover {
+            color: #FDEA79; /* Updated hover color */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+       <!-- Logout Button positioned at the top-right corner -->
+        <a href="index.html" class="logout-btn">Logout</a>
+        
+        
+   
+        <h1>Welcome to the Handicrafts Store</h1>
+        <div class="product-container">
+           
+ <!-- Product 1 -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/5a/0e/6f/5a0e6f6ffb1043f26f2045ac9bdff175.jpg" alt="Product 1">
+            <a href="https://exclusivelane.com/collections/all-products/products/8-warli-handpainted-assorted-pots-with-sheesham-wooden-frame-el-002-001" target="_blank">Handpainted Pots</a>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71halNJkLOL.AC_UL320.jpg" alt="Product 2">
+  <a href="https://www.amazon.in/Fabulo-Wooden-Coaster-Set-Accessories/dp/B0CW9Y47Y4/ref=sr_1_59_sspa?crid=2BK9W409TMECQ&dib=eyJ2IjoiMSJ9.8tjVJPduvwnyGL5xNiNzxV_K0d5llx2ibTR4gBnpKARDRxu0htyvMneCGe5k6ph7_5K1ZXhbluHyp3G-2Y-JqDXxEHRqYY9bnIJ6EK49et7SjLxHSFFobMh_QTrnkee0vyMHlBVtTK8rvZ9VKoHLoMA2Zci5ZVK7i8fk6YQ9oDiOSS6vb5fM2chGywwjVUYYyP4O_DJuZrNMr2jBurdZzl9oF1-K-Q1CUtep4LRi9B0p321jU8onxojis00_sRbgPvs6jwz3ZtGMyM2o8TuNcQjipeFNjLPxTfL6honIMwo.ulUtxlMbCzK8iUurOHgNutjploZ9-Dx3TLt2sdZT2hg&dib_tag=se&keywords=handicrafts&qid=1733580979&sprefix=%2Caps%2C739&sr=8-59-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&th=1" target="_blank">Tea Coasters</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/showpiece-figurine/3/k/a/1-4-jaipuri-handcrafted-fish-handmade-hand-painted-toran-for-original-imah4w7upgjttrug.jpeg?q=70" alt="Product 3">
+            <a href="https://www.flipkart.com/priscilla-jaipuri-hand-painted-main-door-latkan-wall-hanging-wood-multicolor-pack-1-decorative-showpiece-66-cm/p/itm00cf4a0f53f28?pid=SHIGET8BDM4NHBZ9&lid=LSTSHIGET8BDM4NHBZ9L01LI6&marketplace=FLIPKART&q=handicrafts+products&store=search.flipkart.com&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=bbc22572-8c26-4170-920c-eecdd1ddcbe8.SHIGET8BDM4NHBZ9.SEARCH&ppt=hp&ppn=homepage&ssid=8o6uzzw4lc0000001733579811093&qH=14eb89922d3e751f" target="_blank">Wall Hangings</a>
+        </div>
+ <!-- Product 4 -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/7f/59/1c/7f591cc9a2ec4d48f995a908de507d9e.jpg" alt="Product 4">
+            <a href="https://www.amazon.in/BulkySanta-Brass-Akhand-Cover-Large/dp/B0B7N79VQP?ref_=ast_sto_dp&th=1" target="_blank">Brass Diya</a>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/1c/ab/68/1cab685089e8dbc56cbd6c8704a38808.jpg" alt="Product 5">
+            <a href="https://www.amazon.in/CraftVatika-Geometric-Decoration-Tabletop-Decorative/dp/B0BHP3XGWQ?dib=eyJ2IjoiMSJ9.fLiGBgKzO4xyMANNNeb4ttzhN3Tt3s9gerrvldsasFxsxzRLXAujJH5ECSkQH3ro0kypk-DjKnCe-2-Me91acymK3LP2DKq0JriGe4o4uT6JUKfpLQq4R1cN4Bkpm2ZgsUSwFq5EHA6-n2T8KBOqXBtfCetH5mXmcMvZdBZy5sPwUUCvlbck9REWyPPRJuSKxjua6JK0jOL155pAHQLrg8MQ3kQf1mC2-1zZKHZ68IFKxBzYT7p0bA4Y1vrDeiQ2qgLkCE6y7NrWfBD_ObpqxQUPwqNYWbsJwdnrtvFCiws.PfcGO4qiCYvoGsCJx2oMKEEMSslRFnaVgUrXxMo0PD0&dib_tag=se&keywords=decorative%2Bitems%2Bfor%2Bhome&qid=1715755466&rnid=976442031&s=kitchen&sr=1-29&linkCode=sl1&tag=brar0b7-21&linkId=a5e6608e788c3181661732d9317bfdfe&language=en_IN&ref_=as_li_ss_tl&th=1" target="_blank">Metal Flower Vase</a>
+        </div>
+ <!-- Product 6 -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/93/6a/2f/936a2f9ce7f67d133dd331c0a9f8f7cb.jpg" alt="Product 6">
+            <a href="https://exclusivelane.com/collections/made-in-sheesham-wood/products/floral-block-hand-carved-towel-ring-holder-in-sheesham-wood-el-022-066" target="_blank">Floral Block</a>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/18/a6/38/18a63808024d9904a42c6e64815f992a.jpg" alt="Product 7">
+            <a href="https://www.flipkart.com/alwadi-handicrafts-1-iron-7-cup-tealight-holder/p/itmb1f24e93cc8ae?pid=CTHH2MYKEPWTS8UF&lid=LSTCTHH2MYKEPWTS8UF5EVCFO&marketplace=FLIPKART&pageUID=1727941268306" target="_blank">TeaLight Holder</a>
+        </div>
+ <!-- Product 8 -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61Pk6OIanGL.AC_UL320.jpg" alt="Product 8">
+            <a href="https://www.amazon.in/NOBEL-HANDICRAFT-Handmade-Macrame-Bag/dp/B0DJK3YFFN/ref=sr_1_16?crid=2BK9W409TMECQ&dib=eyJ2IjoiMSJ9.8tjVJPduvwnyGL5xNiNzxV_K0d5llx2ibTR4gBnpKARDRxu0htyvMneCGe5k6ph7_5K1ZXhbluHyp3G-2Y-JqDXxEHRqYY9bnIJ6EK49et7SjLxHSFFobMh_QTrnkee0vyMHlBVtTK8rvZ9VKoHLoMA2Zci5ZVK7i8fk6YQ9oDiOSS6vb5fM2chGywwjVUYYyP4O_DJuZrNMr2jBurdZzl9oF1-K-Q1CUtep4LRi9B0p321jU8onxojis00_sRbgPvs6jwz3ZtGMyM2o8TuNcQjipeFNjLPxTfL6honIMwo.ulUtxlMbCzK8iUurOHgNutjploZ9-Dx3TLt2sdZT2hg&dib_tag=se&keywords=handicrafts&qid=1733580979&sprefix=%2Caps%2C739&sr=8-16" target="_blank">Macrame Bag</a>
+        </div>
+ <!-- Product 9 -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71+ae4Y6Q8L.AC_UL320.jpg" alt="Product 9">
+            <a href="https://www.amazon.in/Handicrafts-Handmade-Jewellery-Organizer-Intricate/dp/B0D2LGNH6T/ref=sr_1_17?crid=2BK9W409TMECQ&dib=eyJ2IjoiMSJ9.8tjVJPduvwnyGL5xNiNzxV_K0d5llx2ibTR4gBnpKARDRxu0htyvMneCGe5k6ph7_5K1ZXhbluHyp3G-2Y-JqDXxEHRqYY9bnIJ6EK49et7SjLxHSFFobMh_QTrnkee0vyMHlBVtTK8rvZ9VKoHLoMA2Zci5ZVK7i8fk6YQ9oDiOSS6vb5fM2chGywwjVUYYyP4O_DJuZrNMr2jBurdZzl9oF1-K-Q1CUtep4LRi9B0p321jU8onxojis00_sRbgPvs6jwz3ZtGMyM2o8TuNcQjipeFNjLPxTfL6honIMwo.ulUtxlMbCzK8iUurOHgNutjploZ9-Dx3TLt2sdZT2hg&dib_tag=se&keywords=handicrafts&qid=1733580979&sprefix=%2Caps%2C739&sr=8-17" target="_blank">Wooden Jewlery Box</a>
+        </div>
+        <!-- Product 10 -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/31sl1ka8s4L.AC_UL320.jpg" alt="Product 10">
+            <a href="https://www.amazon.in/SAARTHI-Traditional-Gemstone-Painting-Coaster/dp/B0755L1FD7/ref=sr_1_44?crid=2BK9W409TMECQ&dib=eyJ2IjoiMSJ9.8tjVJPduvwnyGL5xNiNzxV_K0d5llx2ibTR4gBnpKARDRxu0htyvMneCGe5k6ph7_5K1ZXhbluHyp3G-2Y-JqDXxEHRqYY9bnIJ6EK49et7SjLxHSFFobMh_QTrnkee0vyMHlBVtTK8rvZ9VKoHLoMA2Zci5ZVK7i8fk6YQ9oDiOSS6vb5fM2chGywwjVUYYyP4O_DJuZrNMr2jBurdZzl9oF1-K-Q1CUtep4LRi9B0p321jU8onxojis00_sRbgPvs6jwz3ZtGMyM2o8TuNcQjipeFNjLPxTfL6honIMwo.ulUtxlMbCzK8iUurOHgNutjploZ9-Dx3TLt2sdZT2hg&dib_tag=se&keywords=handicrafts&qid=1733580979&sprefix=%2Caps%2C739&sr=8-44" target="_blank">Gemstone Painting</a>
+        </div>
+
+    </div>
+</body>
+</html>

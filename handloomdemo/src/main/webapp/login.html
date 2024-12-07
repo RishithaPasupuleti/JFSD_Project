@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tribe Craft</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4F4039;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #4F4039;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ABA355;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FDEA79;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #4F4039;
+        }
+
+        .back-link a:hover {
+            color: #ABA355;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="home.html" method="POST">
+            <!-- Username Field -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Back to Register -->
+        <div class="back-link">
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>

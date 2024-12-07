@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribe Craft - Home</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        /* Navbar Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #4F4039;
+            color: white;
+        }
+
+        .navbar-left h1 {
+            font-style: italic;
+            font-family: 'Cursive', sans-serif;
+            font-size: 32px;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+            background-color: #ABA355;
+            margin-left: 15px;
+            border-radius: 5px;
+        }
+
+        .navbar-right a:hover {
+            background-color: #FDEA79;
+        }
+
+        /* Hero Section with Background Image */
+        .hero {
+            height: 100vh;
+            background-image: url('your-background-image.jpg'); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #ABA355;
+            padding: 10px 25px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #FDEA79;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="navbar-left">
+                <h1>Tribe Craft</h1>
+            </div>
+            <div class="navbar-right">
+                <a href="login.html" class="btn">Login</a>
+                <a href="register.html" class="btn">Register</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="hero">
+            <div class="overlay">
+                <h2>Welcome to Tribe Craft</h2>
+                <p>Discover and support traditional handcrafted items from tribal artisans.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
